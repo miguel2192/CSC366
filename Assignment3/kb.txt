@@ -1,45 +1,45 @@
-%%%% File: shapes_world_1
-%%%% Line: geometryless 2-D shapes world (simple take on SHRDLU)
+%%%% File: zoo_world_1
+%%%% Line: Animal zoo composed of lions and eagles world 1
 
 %% Facts ...
 
-% square(N, side(L), color(C)) :: N is the name of a square with side L and color c
-square(sera, side(7), color(purple)).
-square(sera, side(5), color(blue)).
-square(sera, side(11), color(red)).
+% lion(X, weight(Y), location(Z)) :: X is the type of a lion with weight Y in pounds and location Z
+lion(barbary, weight(660), location(africa)).
+lion(masai, weight(600), location(africa)).
+lion(congo, weight(600), location(africa)).
 
-% circle(N, radius(R), color(C)) :: N is the name of a circle with radius R and color c
-circle(carla, radius(4), color(green)).
-circle(cora, radius(7), color(blue)).
-circle(connie, radius(3), color(purple)).
-circle(claire, radius(5), color(green)).
+% eagle(X, weight(Y), location(Z)) :: X is the type of a eagle with weight Y in pounds and location Z
+eagle(bald, weight(14), location(america)).
+eagle(bateleur, weight(6), location(africa)).
+eagle(harpy, weight(20), location(mexico)).
+eagle(booted, weight(2.2), location(asia)).
 
 %% Rules ...
 
-% circles :: all those items listed are circles
-circles :- circle(Name,_,_), write(Name),nl, fail.
-circles.
+% lions :: all those items listed are lions
+lions :- lion(Type,_,_), write(Type),nl, fail.
+lions.
 
-%squares :: all those items listes are squares
-squares :- square(Name,_,_),write(Name),nl,fail.
-squares.
+%eagles :: all those items listed are eagles
+eagles :- eagle(Type,_,_),write(Type),nl,fail.
+eagles.
 
-%shapes :: all those items listed are shapes
-shapes :- circles,squares.
+%zoo :: all those items listed are shapes
+zoo :- lions,eagles.
 
-% blue(Name) :: Name is a blue shape
-blue(Name) :- square(Name,_,color(blue)).
-blue(Name) :- circle(Name,_,color(blue)).
+% africa(Type) :: Type is a animal in africa
+africa(Type) :- eagle(Type,_,location(africa)).
+africa(Type) :- lion(Type,_,location(africa)).
 
-% large(Name) :: Name is a large shape
-large(Name) :- area(Name,A),A >= 100.
+% large(Type) :: Type is a large lion in feet
+large(Type) :- size(Type,S),S <= 11.
 
-% small(Name) :: Name is a small shape
-small(Name) :- area(Name,A),A < 100.
+% small(Type) :: Type is a small eagle in inches
+small(Type) :- size(Type,S),S <= 40.
 
-% area(Name, A) :: A is the area of the shape with name Name
-area(Name,A) :- circle(Name, radius(R), _),A is 3.14 * R * R.
-area(Name,A) :- square(Name, side(S), _),A is S * S.
+% weight(Type, H) :: H is the weight of animal with type Type
+weight(Type,H) :- lion(Type, weight(Y), _),H is 1 * Y.
+weight(Type,H) :- square(Type, weight(Y), _),H is 1 * Y.
 
 
 
