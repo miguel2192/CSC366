@@ -3,7 +3,7 @@
 
 %% Facts ...
 
-% squre(N, side(L), color(C)) :: N is the name of a square with side L and color c
+% square(N, side(L), color(C)) :: N is the name of a square with side L and color c
 square(sera, side(7), color(purple)).
 square(sera, side(5), color(blue)).
 square(sera, side(11), color(red)).
