@@ -1,0 +1,38 @@
+FACTS ABOUT LIONS
+
+barbary is an african lion with a weight of 660 pounds.
+masai is an african lion with a weight of 600 pounds.
+congo is an african lion with a weight of 600 pounds.
+
+FACTS ABOUT EAGLES
+
+bald is an american eagle with a weight of 14 pounds.
+bateleur is an african eagle with a weight of 4 pounds.
+harpy is a mexican eagle with a weight of 20 pounds.
+booted is an asian eagle with a weight of 2 pounds.
+
+RULES FOR LISTING LIONS AND EAGLES AND ANIMALS
+
+if you sequentially, exaustively, grab a lions and write its type
+then you will have written the types of all the lions.
+
+if you sequentially, exaustively, grab an eagle and write its type
+then you will have written the types of all the eagles.
+
+if you write the types of all the lions and then write the types of all the
+eagles then you will have written the types of all the animals.
+
+RULES FOR FINDING SPECIAL ANIMALS
+
+if a eagle is african then its type represents an african animal.
+if a eagle is african then its type represents an african animal.
+
+if the size in feet of an animal is at least 11 then its type represents
+a large animal.
+
+if the size in inches of an animal is less than 40 then its type
+represents a small animal.
+
+UTILITIES
+if a lion has a weight Y which determines its height in inches then it is an animal of height H.
+if an eagle has a weight Y which determines its height in inches then it is an animal of height H.

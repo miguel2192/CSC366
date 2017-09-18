@@ -12,7 +12,7 @@ lion(congo, weight(600), location(africa)).
 eagle(bald, weight(14), location(america)).
 eagle(bateleur, weight(6), location(africa)).
 eagle(harpy, weight(20), location(mexico)).
-eagle(booted, weight(2.2), location(asia)).
+eagle(booted, weight(2), location(asia)).
 
 %% Rules ...
 
@@ -24,22 +24,22 @@ lions.
 eagles :- eagle(Type,_,_),write(Type),nl,fail.
 eagles.
 
-%zoo :: all those items listed are shapes
-zoo :- lions,eagles.
+%animal :: all those items listed are shapes
+animal :- lions,eagles.
 
 % africa(Type) :: Type is a animal in africa
 africa(Type) :- eagle(Type,_,location(africa)).
 africa(Type) :- lion(Type,_,location(africa)).
 
 % large(Type) :: Type is a large lion in feet
-large(Type) :- size(Type,S),S <= 11.
+large(Type) :- size(Type,S),S >= 11.
 
 % small(Type) :: Type is a small eagle in inches
 small(Type) :- size(Type,S),S <= 40.
 
-% weight(Type, H) :: H is the weight of animal with type Type
-weight(Type,H) :- lion(Type, weight(Y), _),H is 1 * Y.
-weight(Type,H) :- square(Type, weight(Y), _),H is 1 * Y.
+% height(Type, H) :: H is the height of animal with type Type
+height(Type,H) :- lion(Type, weight(Y), _),H is 1 * Y.
+height(Type,H) :- eagle(Type, weight(Y), _),H is 1 * Y.
 
 
 
