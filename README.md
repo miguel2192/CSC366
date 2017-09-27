@@ -7,6 +7,8 @@ http://www.cs.oswego.edu/~blue/xex/cogsci/faculty/thefaculty/graci/
 > Course Sites
 http://pi.cs.oswego.edu/~blue/oswego/green/2017/CCMCourseSite.html
 #
+> My Course Website
+http://pi.cs.oswego.edu/~mrodrig9/csc366/index.html
 
 - [x] Assignment 1 
 - [ ] Assignment 2 
