@@ -1,50 +1,5 @@
-Script started on Mon 18 Sep 2017 01:57:26 AM EDT
-[4mpi[24m:[1m~/Desktop/csc366/assign5[0m> cat[K[K[Kls
-zoo_world_1_demo.txt  zoo_world_1.pro
-[4mpi[24m:[1m~/Desktop/csc366/assign5[0m> cat zoo_world_1.pro
-%%%% File: zoo_world_1
-%%%% Line: Animal zoo composed of lions and eagles world 1
-
-%% Facts ...
-
-% lion(X, weight(Y), location(Z)) :: X is the type of a lion with weight Y in pounds and location Z
-lion(barbary, weight(660), location(africa)).
-lion(masai, weight(600), location(africa)).
-lion(congo, weight(600), location(africa)).
-
-% eagle(X, weight(Y), location(Z)) :: X is the type of a eagle with weight Y in pounds and location Z
-eagle(bald, weight(14), location(america)).
-eagle(bateleur, weight(6), location(africa)).
-eagle(harpy, weight(20), location(mexico)).
-eagle(booted, weight(2), location(asia)).
-
-%% Rules ...
-
-% lions :: all those items listed are lions
-lions :- lion(Type,_,_), write(Type),nl,fail.
-lions.
-
-%eagles :: all those items listed are eagles
-eagles :- eagle(Type,_,_),write(Type),nl,fail.
-eagles.
-
-%animal :: all those items listed are shapes
-animal :- lions,eagles.
-
-% africa(Type) :: Type is a animal in africa
-africa(Type) :- eagle(Type,_,location(africa)).
-africa(Type) :- lion(Type,_,location(africa)).
-
-% large(Type) :: Type is a large lion in feet
-large(Type) :- height(Type,S),S >= 11.
-
-% small(Type) :: Type is a small eagle in inches
-small(Type) :- height(Type,S),S < 40.
-
-% height(Type, H) :: H is the height of animal with type Type
-height(Type,H) :- lion(Type, weight(Y), _),H is 1 * Y * Y.
-height(Type,H) :- eagle(Type, weight(Y), _),H is Y * Y.
-[4mpi[24m:[1m~/Desktop/csc366/assign5[0m> swipl
+?- swipl
+
 Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
 Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
 SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
@@ -53,11 +8,11 @@ Please visit http://www.swi-prolog.org for details.
 
 For help, use ?- help(Topic). or ?- apropos(Word).
 
-?- consult('zoo_world_1.pro')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C>[K.
-[1mtrue.[0m
+?- consult('zoo_world_1.pro').
 
-*- LIST THE PART OF THE KB PERTAINING TO THE lion RELATION.
-?- listing(lions)[C[C[C[C[C[C[C.
+*- LIST THE PART OF THE KB PERTAINING TO THE lion RELATION.
+
+?- listing(lions).
 lions :-
 	lion(A, _, _),
 	write(A),
@@ -65,18 +20,18 @@ lions :-
 	fail.
 lions.
 
-[1mtrue.[0m
 
-*- LIST THE TYPES OF ALL THE LIONS.
+*- LIST THE TYPES OF ALL THE LIONS.
+
 ?- lions.
 barbary
 masai
 congo
-[1mtrue.[0m
 
 
-*- LIST THE PART OF THE KB PERTAINING TO THE eagles RELATION.
-?- listing(eagles)[C[C[C[C[C[C[C[C.
+*- LIST THE PART OF THE KB PERTAINING TO THE eagles RELATION.
+
+?- listing(eagles).
 eagles :-
 	eagle(A, _, _),
 	write(A),
@@ -84,23 +39,23 @@ eagles :-
 	fail.
 eagles.
 
-[1mtrue.[0m
 
-*- LIST THE TYPES OF ALL THE EAGlES
+*- LIST THE TYPES OF ALL THE EAGlES
+
 ?- eagles.
 bald
 bateleur
 harpy
 booted
-[1mtrue.[0m
 
-*- LIST THE PART OF THE KB PERTAINING TO THE animal RELATION.
-?- listing(animal)[C[C[C[C[C[C[C[C.
+
+*- LIST THE PART OF THE KB PERTAINING TO THE animal RELATION.
+
+?- listing(animal).
 animal :-
 	lions,
 	eagles.
 
-[1mtrue.[0m
 
 *- LIST THE TYPES OF ALL THE ANIMALS.
 ?- animal.
@@ -111,41 +66,38 @@ bald
 bateleur
 harpy
 booted
-[1mtrue.[0m
 
-*- FIND AN AFRICAN ANIMAL.
-?- africa(Type)[C[C[C[C[C[C.
-Type = bateleur [1m;[0m
-Type = barbary [1m;[0m
-Type = masai [1m;[0m
+*- FIND AN AFRICAN ANIMAL.
+
+?- africa(Type).
+Type = bateleur 
+Type = barbary 
+Type = masai 
 Type = congo.
 
-*- LIST THE NAMES OF ALL THE TALL ANIMALS.
-?- large(Type)[C[C[C[C[C[C,write(Type)[C[C[C[C[C[C,nl,fail.
+*- LIST THE NAMES OF ALL THE TALL ANIMALS.
+
+?- large(Type),write(Type),nl,fail.
 barbary
 masai
 congo
 bald
 bateleur
 harpy
-[1;31mfalse.[0m
 
-*- LIST THE TYPES OF ALL THE SMALL ANIMALS.
-?- saml[K[K[Kmall(Type)[C[C[C[C[C[C,write(Type)[C[C[C[C[C[C,nl,fail.
+*- LIST THE TYPES OF ALL THE SMALL ANIMALS.
+
+?- small(Type),write(Type),nl,fail.
 bateleur
 booted
-[1;31mfalse.[0m
 
 *- WHAT IS harpy's HEIGHT IN INCHES?
-?- height(harpy,H)[C[C[C[C[C[C[C[C[C.
+?- height(harpy,H).
 H = 400.
 
 *- WHAT IS bald's HEIGHT IN INCHES?
-?- height(bald)[C[C[C[C[C[C[K,H)[C[C[C[C[C[C[C[C.
+?- height(bald,H).
 H = 196.
 
 ?- halt.
-[4mpi[24m:[1m~/Desktop/csc366/assign5[0m> end [K[K[Kexit
-exit
 
-Script done on Mon 18 Sep 2017 02:02:18 AM EDT
