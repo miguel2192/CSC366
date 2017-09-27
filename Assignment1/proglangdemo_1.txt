@@ -1,28 +1,4 @@
-Script started on Thu 31 Aug 2017 03:27:30 PM EDT
-[4mpi[24m:[1m~/Desktop/csc366/assign1[0m> cat proglang.pro
-language(smalltalk).
-language(lisp).
-language(prolog).
-
-essence(smalltak, objects, 'message passing').
-essence(lisp, lists, 'recursive functions').
-essence(prolog, relations, 'logical inferencing').
-
-history(samlltalk, inventor('Alan Kay'), date(1980)).
-history(lisp, inventor('John McCarthy'), date(1959)).
-history(prolog, inventor('Alan Colmeraur'), date(1971)).
-
-[4mpi[24m:[1m~/Desktop/csc366/assign1[0m> swipl
-Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
-Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
-SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
-and you are welcome to redistribute it under certain conditions.
-Please visit http://www.swi-prolog.org for details.
-
-For help, use ?- help(Topic). or ?- apropos(Word).
-
-?- cos[Knsult('proglang.pro')[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
-[1mtrue.[0m
+?- consult('proglang.pro')
 
 ?- listing.
 
@@ -174,10 +150,4 @@ library_directory(B) :-
 :- dynamic message_hook/3.
 :- multifile message_hook/3.
 
-[1mtrue.[0m
-
 ?- halt.
-[4mpi[24m:[1m~/Desktop/csc366/assign1[0m> exit
-exit
-
-Script done on Thu 31 Aug 2017 03:30:13 PM EDT

@@ -1,30 +1,9 @@
-Script started on Fri 01 Sep 2017 02:05:45 PM EDT
-[4mnuc21[24m:[1m~/Desktop/csc366/assign2[0m> cat proglang.pro
-
 %% file: proglang.pro
 %% line: some knowledge about programming languages
 
 % language(L) means L is a programming language
 
-language(smalltalk).
-language(lisp).
-language(prolog).
-
-%essence(L,DT,CF) means language L features datatype DT
-% and computational formalism CF
-
-essence(smalltalk,objects,'message passing').
-essence(lisp,lists,'recursive functions').
-essence(proglog,relations,'logical inferencing').
-
-% history(L,I,D) means language L was invented by I in year D
-
-history(smalltalk,inventor('Alan Kay'),date(1980)).
-history(lisp,inventor('John McCarthy'),date(1959)).
-history(prolog,inventor('Alan Colmeraur'),date(1971)
-
-
-[4mnuc21[24m:[1m~/Desktop/csc366/assign2[0m> swipl
+?- swipl
 
 Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
 Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
@@ -34,63 +13,50 @@ Please visit http://www.swi-prolog.org for details.
 
 For help, use ?- help(Topic). or ?- apropos(Word).
 
-?- consult('prog[Kglang.pro')
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
-[1mtrue.[0m
+?- consult('proglang.pro')
 
-?- language(pascal)[C[C[C[C[C[C[C[C.
-[1;31mfalse.[0m
+?- language(pascal).
 
-?- language(prolog)[C[C[C[C[C[C[C[C.
-[1mtrue.[0m
+?- language(prolog).
 
-?- language(X)[C[C[C.
-X = smalltalk [1m.[0m
+?- language(X).
 
-?- language(L)[C[C[C.
-L = smalltalk [1m;[0m
-L = lisp [1m.[0m
+?- language(L).
+L = smalltalk,
+L = lisp 
 
-?- language(Language)[C[C[C[C[C[C[C[C[C[C, write(Language)[C[C[C[C[C[C[C[C[C[C, nl, faikl[K[Kl.
+?- language(Language),write(Language), nl, fail.
 smalltalk
 lisp
 prolog
-[1;31mfalse.[0m
 
-?- essence(prog[Klog[K[K[K[K[K[Klisp,DT,CF)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+
+?- essence(lisp,DT,CF)
 DT = lists,
 CF = 'recursive functions'.
 
+Yes
 ?- essence(prolog,DT,_)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
-[1;31mfalse.[0m
-
+DT = relations
+Yes
 ?- essence(prolog,_,CF)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C,[K.
-[1;31mfalse.[0m
+CF = 'logical inferencing'
+Yes
 
-?- essence(L,objects,_)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+?- essence(L,objects,_).
 L = smalltalk.
+Yes
 
-?- history(Lisp,I[K[K[K[K[K[Klisp,I,_)[C[C[C[C[C[C[C[C[C[C.
+?- history(Lisp,lisp,I,_).
 I = inventor('John McCarthy').
 
-?- history(lisp,inventor(name[K[K[K[Kname[K[K[K[KName)[C[C[C[C[C[C,_)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.
+?- history(lisp,inventor(name,_).
 Name = 'John McCarthy'.
 
-?- j[Khistory(_,inventor(N)[C[C[C,_)
-[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C,write(N)[C[C[C,nl,fail.
+?- history(_,inventor(N),_),nl,fail.
 Alan Kay
 John McCarthy
 Alan Colmeraur
-[1;31mfalse.[0m
 
 ?- halt.
-[4mnuc21[24m:[1m~/Desktop/csc366/assign2[0m> exirt[K[Kt
 
-exit
-
-Script done on Fri 01 Sep 2017 02:12:49 PM EDT
