@@ -11,9 +11,9 @@ http://pi.cs.oswego.edu/~blue/oswego/green/2017/CCMCourseSite.html
 http://pi.cs.oswego.edu/~mrodrig9/csc366/index.html
 
 - [x] Assignment 1 [x] DEMO :+1:
-- [x] Assignment 2 [x] DEMO 
-- [x] Assignment 3 [x] DEMO
-- [x] Assignment 4  
+- [x] Assignment 2 [x] DEMO :+1:
+- [x] Assignment 3 [x] DEMO :+1:
+- [x] Assignment 4          :+1:     
 - [x] Assignment 5 [ ] DEMO
 - [ ] Assignment 6 [ ] DEMO
 #
