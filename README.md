@@ -1,5 +1,5 @@
 # CSC366
-###### Computational Models of Cognitive Processing(CSC366) taught by Prof. Doug Lea at SUNY Oswego.
+###### Computational Models of Cognitive Processing(CSC366) taught by Prof. Craig Graci at SUNY Oswego.
 # 
 > Craig Graci's Website
 http://www.cs.oswego.edu/~blue/xex/cogsci/faculty/thefaculty/graci/
