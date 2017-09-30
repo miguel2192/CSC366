@@ -16,5 +16,5 @@ http://pi.cs.oswego.edu/~mrodrig9/csc366/index.html
 - [x] Assignment 4          :+1:     
 - [x] Assignment 5 [x] DEMO :+1:
 - [ ] Assignment 6 [ ] DEMO
-- [ ] Assignment 7          :+1:
+- [x] Assignment 7 (paper)  :+1:
 #
