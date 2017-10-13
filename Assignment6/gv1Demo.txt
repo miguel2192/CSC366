@@ -1,0 +1,84 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('gv1.pro').
+
+?- declare(a, 10).
+true.
+
+?- displayBindings.
+a -> 10
+true.
+
+?- add(a, 3).
+true.
+
+?- displayBindings.
+a -> 13
+true.
+
+?- undeclare(a).
+true.
+
+?- displayBindings.
+true.
+
+?- declare(a, 3).
+true.
+
+?- displayBindings.
+a -> 3
+true.
+
+?- sub(a, 1).
+true.
+
+?- displayBindings.
+a -> 2
+true.
+
+?- mul(a, 3).
+true.
+
+?- displayBindings.
+a -> 6
+true.
+
+?- div(a, 3).
+true.
+
+?- displayBindings.
+a -> 2
+true.
+
+?- inc(a).
+true.
+
+?- displayBindings.
+a -> 3
+true.
+
+?- dec(a).
+true.
+
+?- displayBindings.
+a -> 2
+true.
+
+?- valueOf(a, 4).
+false.
+
+?- valueOf(a, 2).
+true.
+
+?- bind(b, 7).
+false.
+
+?- displayBindings.
+a -> 2
+true.
