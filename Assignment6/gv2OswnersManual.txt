@@ -1,0 +1,20 @@
+***Users Manual for Global Variable ADT Augmented Functionality.***
+
+Assigning values to variables:
+	- type "declare(VarName, ValueTBAssigned)." on the CLI
+Unassigning values to variables:
+	- type "undeclare(VarName)." on the CLI
+
+Arithmetic functions are as follows:
+	-add -> addition
+	-sub -> subtraction
+	-mul -> multiplication
+	-div -> division
+	-pow -> power
+
+Using the Arithmetic functions:
+	-Variables must map to a value
+	-Type "funcName(NumA, NumB, ResVal)." on the CLI
+
+Diplaying to CLI:
+	-Type "displayBindings." on the CLI

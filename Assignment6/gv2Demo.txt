@@ -1,0 +1,52 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('gv2.pro').
+true.
+
+?- declare(a,10).
+true.
+
+?- declare(b,5).
+true.
+
+?- displayBindings.
+a -> 10
+b -> 5
+true.
+
+?- add(a,b,sum).
+true.
+
+?- displayBindings.
+a -> 10
+b -> 5
+sum -> 15
+true.
+
+?- sub(a,b,difference).
+true.
+
+?- mul(a,b,product).
+true.
+
+?- div(a,b,quotient).
+true.
+
+?- pow(a,b,power).
+true.
+
+?- displayBindings.
+sum -> 15
+difference -> 5
+product -> 50
+quotient -> 2
+a -> 10
+b -> 5
+power -> 100000
+true.
