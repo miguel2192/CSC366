@@ -107,12 +107,12 @@ crypto( N1, N2, N3, N4, G, Expr ) :-
 
 % Order five crypto problem solver
 crypto(N1, N2, N3, N4, N5, G, Expr ) :- 
-	combos( set(N1,N2,N3,N4,N5), combo(A,B), extras(C,D,E) ),
-	crypto( A, B, SG, SGE ), 
-	crypto( C, D, G, AG, AUGE ), 
-	crypto( E, AG, G, UGE), 
-	substitute( SGE, SG, AUGE, SE), 
-	substitute( SE, AG, UGE, Expr ). 
+   combos( set(N1,N2,N3,N4,N5), combo(A,B), extras(C,D,E) ),
+   crypto( A, B, SG, SGE ), 
+   crypto( C, D, G, AG, AUGE ), 
+   crypto( E, AG, G, UGE), 
+   substitute( SGE, SG, AUGE, SE), 
+   substitute( SE, AG, UGE, Expr ). 
 
 % Substitution
 substitute( New, Old, ex( Old, O, Z), ex( New, O, Z ) ).
