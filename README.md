@@ -18,5 +18,5 @@ http://pi.cs.oswego.edu/~mrodrig9/csc366/index.html
 - [X] Assignment 6          :+1:
 - [x] Assignment 7 (paper)  :+1:
 - [X] Assignment 8          :+1:
-- [X] Assignment 9          :+1:
+- [X] Assignment 9 (paper)  :+1:
 #
