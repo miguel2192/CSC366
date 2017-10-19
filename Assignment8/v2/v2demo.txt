@@ -1,0 +1,44 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('crypto.pro').
+true.
+
+?- crypto(3,5,8,X).
+X = ex(3, +, 5) ;
+false.
+
+?- crypto(2,3,4,X).
+false.
+
+?- crypto(2,6,3,X).
+X = ex(6, /, 2).
+
+?- crypto(5,3,1,4,X).
+false.
+
+?- crypto(5,8,2,11,3,X).
+X = ex(ex(11, -, 2), /, ex(8, -, 5)) ;
+X = ex(ex(11, +, ex(8, /, 2)), /, 5) ;
+X = ex(ex(11, -, 2), /, ex(8, -, 5)) ;
+false.
+
+?- crypto(11,14,12,13,6,X).
+false.
+
+?- crypto(11,14,7,4,2,X).
+X = ex(ex(ex(11, -, 7), *, 4), -, 14) ;
+X = ex(ex(4, *, ex(11, -, 7)), -, 14) ;
+false.
+
+?- crypto(5,5,11,12,7,X).
+X = ex(5, +, ex(12, /, ex(11, -, 5))) ;
+X = ex(5, +, ex(12, /, ex(11, -, 5))) ;
+false.
+
+?- halt.

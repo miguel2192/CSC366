@@ -1,0 +1,71 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('crypto.pro').
+true.
+
+?- crypto(4,5,6,X).
+false.
+
+?- crypto(20,5,4,X).
+X = ex(20, /, 5) .
+
+?- crypto(1,3,5,7,X).
+X = ex(5, -, ex(1, -, 3)) ;
+X = ex(5, +, ex(3, -, 1)) ;
+X = ex(ex(3, +, 5), -, 1) ;
+X = ex(3, -, ex(1, -, 5)) ;
+X = ex(3, +, ex(5, -, 1)) ;
+false.
+
+?- crypto(5,8,2,11,3,X).
+X = ex(ex(11, -, 2), /, ex(8, -, 5)) ;
+X = ex(ex(11, +, ex(8, /, 2)), /, 5) ;
+X = ex(ex(11, -, 2), /, ex(8, -, 5)) ;
+false.
+
+?- crypto(3,7,8,5,8,2,X).
+X = ex(ex(ex(7, +, ex(8, -, 3)), -, 2), -, 8) ;
+X = ex(8, -, ex(ex(7, +, ex(8, -, 3)), /, 2)) ;
+X = ex(8, /, ex(ex(7, -, ex(8, -, 3)), +, 2)) ;
+X = ex(8, /, ex(2, +, ex(7, -, ex(8, -, 3)))) ;
+X = ex(8, /, ex(ex(7, -, ex(8, -, 3)), *, 2)) ;
+X = ex(8, /, ex(2, *, ex(7, -, ex(8, -, 3)))) ;
+X = ex(8, /, ex(2, -, ex(ex(8, -, 3), -, 7))) ;
+X = ex(ex(7, +, ex(ex(8, -, 3), -, 2)), -, 8) ;
+X = ex(8, /, ex(7, -, ex(ex(8, -, 3), -, 2))) ;
+X = ex(8, /, ex(7, +, ex(2, -, ex(8, -, 3)))) ;
+X = ex(ex(7, -, ex(2, -, ex(8, -, 3))), -, 8) ;
+X = ex(8, /, ex(ex(7, +, 2), -, ex(8, -, 3))) ;
+X = ex(ex(ex(7, -, 2), +, ex(8, -, 3)), -, 8) ;
+X = ex(ex(ex(8, -, 3), +, ex(7, -, 2)), -, 8) ;
+X = ex(ex(ex(8, -, 3), -, ex(2, -, 7)), -, 8) ;
+X = ex(8, +, ex(ex(3, +, 5), -, ex(7, *, 2))) ;
+X = ex(8, -, ex(ex(7, *, 2), -, ex(3, +, 5))) ;
+X = ex(8, +, ex(8, -, ex(7, *, ex(5, -, 3)))) ;
+X = ex(8, -, ex(ex(7, *, ex(5, -, 3)), -, 8)) ;
+X = ex(ex(ex(7, -, 5), *, ex(8, -, 3)), -, 8) ;
+X = ex(8, -, ex(2, -, ex(ex(8, -, 5), -, 7))) ;
+X = ex(8, +, ex(ex(ex(8, -, 5), -, 7), -, 2)) ;
+X = ex(8, -, ex(2, +, ex(7, -, ex(8, -, 5)))) ;
+X = ex(8, +, ex(ex(8, -, 5), -, ex(7, +, 2))) ;
+X = ex(8, -, ex(ex(7, +, 2), -, ex(8, -, 5))) ;
+X = ex(8, -, ex(7, -, ex(ex(8, -, 5), -, 2))) ;
+X = ex(8, +, ex(ex(ex(8, -, 5), -, 2), -, 7)) ;
+X = ex(8, -, ex(7, +, ex(2, -, ex(8, -, 5)))) ;
+X = ex(8, -, ex(2, -, ex(ex(8, -, 5), -, 7))) ;
+X = ex(8, +, ex(ex(ex(8, -, 5), -, 7), -, 2)) ;
+X = ex(8, -, ex(2, +, ex(7, -, ex(8, -, 5)))) ;
+X = ex(8, +, ex(ex(8, -, 5), -, ex(7, +, 2))) ;
+X = ex(8, -, ex(ex(7, +, 2), -, ex(8, -, 5))) ;
+X = ex(8, -, ex(7, -, ex(ex(8, -, 5), -, 2))) ;
+X = ex(8, +, ex(ex(ex(8, -, 5), -, 2), -, 7)) ;
+X = ex(8, -, ex(7, +, ex(2, -, ex(8, -, 5)))) ;
+false.
+
+?- halt.
