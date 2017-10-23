@@ -35,10 +35,10 @@
 % ------------------------------------------------------------------------------
 
 %establish crypto cryptos problem parameters
-establishCryptoProblemParameters :-
+establishCryptoProblem :-
   declare(lo,0),
   declare(hi,15).
-  :- establishCryptoProblemParameters.
+  :- establishCryptoProblem.
 
 %generates a random number within a range
 generateRandomCryptoNumber(N) :-
@@ -126,7 +126,7 @@ substitute(New, Old, ex(X, O, Z), ex(X,O,Q)) :-
 % establish/internalize a specific crypto problem
 % ------------------------------------------------------------------------------
 
-establishSpecificCryptoProblemParameters(N1,N2,N3,N4,N5,G) :-
+establishSpecificCryptoProblem(N1,N2,N3,N4,N5,G) :-
   addCryptoProblemToKnowledgeBase(N1,N2,N3,N4,N5,G).
 
 %-------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ solve(random) :-
 % ------------------------------------------------------------------------------
 
 solve(numbers(N1,N2,N3,N4,N5),goal(G)) :-
-  establishSpecificCryptoProblemParameters(N1,N2,N3,N4,N5,G),
+  establishSpecificCryptoProblem(N1,N2,N3,N4,N5,G),
   displayProblem,
   solveProblemDecompositionally,
   displaySolution.
