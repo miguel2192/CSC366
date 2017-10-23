@@ -1,0 +1,55 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('crypto.pro').
+true.
+
+?- solve(random).
+Problem: Numbers = {5,10,6,0,4} Goal = 11
+Solution: ( ( 6 * 0 ) - ( 4 - ( 5 + 10 ) ) )
+true .
+
+?- solve(random).
+Problem: Numbers = {11,14,14,7,5} Goal = 14
+Solution: ( ( 14 + ( 11 * 14 ) ) / ( 7 + 5 ) )
+true .
+
+?- solve(numbers(2,3,5,7,11),goal(13)).
+Problem: Numbers = {2,3,5,7,11} Goal = 13
+Solution: ( 11 + ( ( 5 + 7 ) / ( 2 * 3 ) ) )
+true .
+
+?- solve(numbers(1,1,2,3,5),goal(8)).
+Problem: Numbers = {1,1,2,3,5} Goal = 8
+Solution: ( ( ( 1 + 1 ) + 3 ) + ( 5 - 2 ) )
+true .
+
+?- demo(10).
+Problem: Numbers = {0,7,1,2,1} Goal = 6
+Solution: ( ( 1 + ( 0 + 7 ) ) - ( 1 * 2 ) )
+Problem: Numbers = {5,3,7,7,3} Goal = 11
+Solution: ( ( 7 - 7 ) + ( 3 + ( 5 + 3 ) ) )
+Problem: Numbers = {8,5,11,8,12} Goal = 12
+Solution: ( ( 12 + ( 8 - 5 ) ) - ( 11 - 8 ) )
+Problem: Numbers = {4,0,12,15,15} Goal = 12
+Solution: ( 12 + ( ( 4 + 0 ) * ( 15 - 15 ) ) )
+Problem: Numbers = {0,12,9,3,1} Goal = 6
+Solution: ( ( 1 * ( 0 + 12 ) ) - ( 9 - 3 ) )
+Problem: Numbers = {15,5,6,10,13} Goal = 15
+Solution: ( ( 6 * ( 15 / 5 ) ) + ( 10 - 13 ) )
+Problem: Numbers = {1,2,1,13,4} Goal = 7
+Solution: ( ( 1 + 13 ) - ( 4 + ( 1 + 2 ) ) )
+Problem: Numbers = {3,3,14,13,6} Goal = 3
+Solution: ( ( ( 3 + 3 ) * ( 13 - 6 ) ) / 14 )
+Problem: Numbers = {14,12,1,14,11} Goal = 6
+Solution: ( ( 1 + 14 ) - ( 11 - ( 14 - 12 ) ) )
+Problem: Numbers = {10,2,1,5,14} Goal = 8
+Solution: ( ( 1 + 5 ) + ( 14 - ( 10 + 2 ) ) )
+true .
+
+?- halt.
