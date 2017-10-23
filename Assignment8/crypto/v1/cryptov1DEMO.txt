@@ -21,3 +21,5 @@ Problem: Numbers = {13,12,13,7,10} Goal = 1
 Problem: Numbers = {7,1,10,13,11} Goal = 14
 Problem: Numbers = {14,6,0,1,6} Goal = 5
 true .
+
+?- halt.
