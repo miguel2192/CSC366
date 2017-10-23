@@ -1,0 +1,23 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('crypto.pro').
+true.
+
+?- generate(10).
+Problem: Numbers = {3,13,7,11,13} Goal = 5
+Problem: Numbers = {10,5,1,14,3} Goal = 9
+Problem: Numbers = {9,0,4,4,1} Goal = 14
+Problem: Numbers = {3,15,5,7,13} Goal = 7
+Problem: Numbers = {8,9,0,3,1} Goal = 8
+Problem: Numbers = {14,5,9,13,13} Goal = 3
+Problem: Numbers = {15,5,3,1,10} Goal = 8
+Problem: Numbers = {13,12,13,7,10} Goal = 1
+Problem: Numbers = {7,1,10,13,11} Goal = 14
+Problem: Numbers = {14,6,0,1,6} Goal = 5
+true .
