@@ -1,0 +1,111 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('lp.pro').
+true.
+
+?- writelist([1,3,4,5]).
+1
+3
+4
+5
+true.
+
+?- member(a,[a,b,c,d]).
+true .
+
+?- size([a,b,c,d],X).
+X = 4.
+
+?- size([a,b,c,d,e,f],X).
+X = 6.
+
+?- item(0,[1,2,3],X).
+X = 1 .
+
+?- item(2,[1,2,3],X).
+X = 3 .
+
+?- append([a,b],[f],X).
+X = [a, b, f].
+
+?- last([q,f,g],X).
+X = g .
+
+?- remove(a,[a,b,c,d],X).
+X = [b, c, d] .
+
+?- replace(0,b,[a,2,3],X).
+X = [b, 2, 3] .
+
+?- makelist(9,bacon,X).
+X = [bacon, bacon, bacon, bacon, bacon, bacon, bacon, bacon, bacon] .
+
+?- reverse([a,b,c,d,e], X).
+X = [e, d, c, b, a] .
+
+?- lastput(x,[a,b,c,d],X).
+X = [a, b, c, d, x] .
+
+?- pick([a,b,c,d,mar],X).
+X = b .
+
+?- pick([a,b,c,d,mar],X).
+X = c .
+
+?- pick([a,b,c,d,mar],X).
+X = b .
+
+?- pick([a,b,c,d,mar],X).
+X = mar .
+
+?- take([a,b,c,d],X,Y).
+X = d,
+Y = [a, b, c] .
+
+?- take([a,b,c,d],X,Y).
+X = b,
+Y = [a, c, d] .
+
+?- iota(9,X).
+X = [1, 2, 3, 4, 5, 6, 7, 8, 9] .
+
+?- iota(5,X).
+X = [1, 2, 3, 4, 5] .
+
+?- sum([1,2],X).
+X = 3.
+
+?- sum([1,2,4],X).
+X = 7.
+
+?- min([1,2,3,4],X).
+X = 1 .
+
+?- max([1,2,3,4],X).
+X = 4 .
+
+?- sort_inc([2,5,6,1],X).
+X = [1, 2, 5, 6] .
+
+?- sort_dec([2,5,6,1],X).
+X = [6, 5, 2, 1] .
+ 
+?- alist([1,2,3],[a,b,c],X).
+X = [pair(1, a), pair(2, b), pair(3, c)].
+
+?- assoc([pair(1,a),pair(2,b),pair(3,c)],1,X).
+X = a .
+
+?- assoc([pair(1,a),pair(2,b),pair(3,c)],3,X).
+X = c .
+
+?- flatten([[bacon, eggs, beef],[onion, potato, tomato]],X).
+X = [bacon, eggs, beef, onion, potato, tomato] .
+
+?- halt.
