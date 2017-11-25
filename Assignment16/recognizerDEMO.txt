@@ -1,0 +1,51 @@
+Welcome to SWI-Prolog (Multi-threaded, 64 bits, Version 7.2.3)
+Copyright (c) 1990-2015 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('crypto_nlp_r.pro').
+true.
+
+?- recognizer.
+|: Use five and four and three and two and one to make zero.
+ok
+|: Use five and five and five and five and five to make five.
+ok
+|: Use one two three four and five to make six.
+ok
+|: Use one two three four five to make six.
+Not a sentence ...
+|: Write zero in terms of two through six.
+Not a sentence ...
+|: Write zero in terms of numbers of two through six.
+Not a sentence ...
+|: Write zero in terms of numbers two through six.
+ok
+|: Can you make seven from the first five positive numbers?
+ok
+|: Use whatever to make whatever.
+ok
+|: Can you make three from two zeros and three ones.
+Not a sentence ...
+|: Can you make three from two zeros and three ones?
+ok
+|: Can you make nine from one nine and four threes?
+ok
+|: Can you make nine from four threes and one nine?
+ok
+|: Can you make five from nine threes?
+Not a sentence ...
+|: Can you make 5 from 9 threes?
+Not a sentence ...
+|: 
+WARNING: By typing Control-C twice, you have forced an asynchronous
+WARNING: interrupt.  Your only SAFE operation are: c(ontinue), p(id),
+WARNING: s(stack) and e(xit).  Notably a(abort) often works, but
+WARNING: leaves the system in an UNSTABLE state
+
+Action (h for help) ? abort
+% Execution Aborted
+
