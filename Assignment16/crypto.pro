@@ -23,7 +23,7 @@
 % Operator is one of the four basic arithmetic operators
 % ------------------------------------------------------------------------------
 % load some files
-:- consult('gv1.pro').
+:- consult('gv2.pro').
 :- consult('combosets.pro').
 
 %-------------------------------------------------------------------------------

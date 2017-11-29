@@ -1,0 +1,60 @@
+﻿CCM Conceptual/Theoretical Challange
+Crypto: Heuristic Problem Solving
+
+Crypto Examples
+
+
+H1. – if sameP(A,B) ^ zeroP(C,D,E) ^ oneP(G) then ((A/B) + zeroX(C,D,E) )
+
+	Numbers = {5,5,10,2,5} Goal= 1 ...Solution = ((5/5) + ((10/2)-5))
+	Numbers = {1,5,3,2,1} Goal= 1 ...Solution = ((1/1) + ((5-3)-2))
+	Numbers = {8,4,0,7,7} Goal= 1 ...Solution = ((7/7) + (0 * (8+4)))
+
+H2. – if sameP(A,B) and goalP(C,D,E) then ((A-B) + goalX(C,D,E) )
+
+	Numbers = {0,5,0,1,10} Goal= 2 ...Solution = ((0-0) + ((10/5)*1))
+	Numbers = {1,3,3,2,5} Goal= 7 ...Solution = ((3-3) + ((5*1)+2))
+	Numbers = {8,4,2,7,7} Goal= 4 ...Solution = ((7-7) + (2* (8/4)))
+
+H3. – if zeroP(A) and goalP(B) and numbers P(C,D,E) then ( B + ( A * ( C * ( D * E )) ) )
+	
+	Numbers = {0,3,10,2,5} Goal= 5 ...Solution = ( 5 + ( 0 * ( 3 * ( 10 * 2 )) ) )
+	Numbers = {1,6,0,2,5} Goal= 6 ...Solution = ( 6 + ( 1 * ( 5 * ( 0 * 2)) ) )
+	Numbers = {9,7,10,1,0} Goal= 10 ...Solution = ( 10 + ( 9 * ( 1 * ( 7 * 0 )) ) )
+
+H4. – if sameP(A,B) and goalP( C) and numbersP(D,E) then ( C+ ( ( A –B) * ( D *E ) ) )
+
+	Numbers = {5,5,9,2,6} Goal= 9 ...Solution = ( 9 + ( ( 5 –5) * ( 6 *2 ) ) )
+	Numbers = {6,7,6,2,5} Goal= 7 ...Solution = ( 7+ ( ( 6 –6) * ( 2 *5 ) ) )
+	Numbers = {1,2,1,3,5} Goal= 3 ...Solution = ( 3+ ( ( 1 –1) * ( 2 *5 ) ) )
+
+H5. – if oneP(A) and zeroP(B,C,D) and onemoreP(E,G) then ( ( E-A) + zeroX(C,D,B) )
+
+	Numbers = {8,1,10,2,0} Goal= 7 ...Solution = ( ( 8-1) + ((10/2) * 0) )
+	Numbers = {9,9,1,2,5} Goal= 4 ...Solution = ( ( 5-1) + ((9-9) * 2) )
+	Numbers = {4,1,10,2,0} Goal= 3 ...Solution = ( ( 4-1) + (0 * (10/2)) )
+
+H6. – if oneP(A) and oneP(B) and zeroP(C,D) and twomoreP(E,G) then ( ( E –(A + B) )+ zeroX(C,D) )
+
+	Numbers = {5,1,1,2,2} Goal= 3 ...Solution = ( ( 5 –(1 + 1) )+ (2-2) )
+	Numbers = {10,1,1,2,0} Goal= 8 ...Solution = ( ( 10 –(1 + 1) )+ (2*0) )
+	Numbers = {4,1,1,7,7} Goal= 2 ...Solution = ( ( 4 –(1 + 1) )+ (7-7) )
+
+H7. – if sameP(A,B) and sameP(C,D) and twomoreP(E, G) then (E –( ( A/B) + (C/D ) ) )
+
+	Numbers = {5,5,2,2,6} Goal= 4 ...Solution = (6 –( ( 5/5) + (2/2 ) ) )
+	Numbers = {1,7,1,3,3} Goal= 5 ...Solution = (7 –( ( 1/1) + (3/3 ) ) )
+	Numbers = {6,4,6,9,4} Goal= 7 ...Solution = (9 –( ( 6/6) + (4/4 ) ) )
+
+H8. – if twoP(A.B) and zeroP(C,D) and twomoreP(E,G) then ( ( E– twoX( A,B) ) + zeroX(C,D) )
+
+	Numbers = {6,3,2,2,5} Goal= 3 ...Solution = ( ( 5– (6/3)) + (2-2) )
+	Numbers = {7,0,4,2,8} Goal= 3 ...Solution = ( ( 8– (4-2)) + (7*0) )
+	Numbers = {5,4,6,2,2} Goal= 5 ...Solution = ( ( 6– (5-4)) + (2-2) )
+
+H9. – if sameP(A,B,C,D,E,G) then (A + ( ( B – C) + ( D -E ) ) )
+
+	Numbers = {5,5,5,5,5} Goal= 5 ...Solution = (5 + ( ( 5 – 5) + ( 5 -5 ) ) )
+	Numbers = {6,6,6,6,6} Goal= 6 ...Solution = (6 + ( ( 6– 6) + ( 6 -6 ) ) )
+	Numbers = {7,7,7,7,7} Goal= 7 ...Solution = (7 + ( ( 7 – 7) + ( 7 -7 ) ) )
+
