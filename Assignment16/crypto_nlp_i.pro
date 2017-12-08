@@ -114,6 +114,10 @@ tryToSolveProblemDecompositionally :-
 tryToSolveProblemDecompositionally.
 
 recordSolution(Expression):-
+  retract(solution(_)),
+  assert(solution(Expression)).
+
+recordSolution(Expression):-
   assert(solution(Expression)).
 
 eraseSolution :-
@@ -124,10 +128,6 @@ eraseProblem :-
   retract(problem(_,_)).
   eraseProblem.
 	
-recordSolution(Expression):-
-  retract(solution(_)),
-  assert(solution(Expression)).
-
 establishCryptoProblem(numbers(N1,N2,N3,N4,N5),goal(G))	:-
   addCryptoProblemToKnowledgeBase(N1,N2,N3,N4,N5,G).
 
