@@ -113,9 +113,6 @@ tryToSolveProblemDecompositionally :-
 
 tryToSolveProblemDecompositionally.
 
-establishCryptoProblem(numbers(N1,N2,N3,N4,N5),goal(G))	:-
-  addCryptoProblemToKnowledgeBase(N1,N2,N3,N4,N5,G).
-
 recordSolution(Expression):-
   assert(solution(Expression)).
 
@@ -130,6 +127,9 @@ eraseProblem :-
 recordSolution(Expression):-
   retract(solution(_)),
   assert(solution(Expression)).
+
+establishCryptoProblem(numbers(N1,N2,N3,N4,N5),goal(G))	:-
+  addCryptoProblemToKnowledgeBase(N1,N2,N3,N4,N5,G).
 
 
 %------------------------------------------------------------------
